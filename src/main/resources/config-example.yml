@@ -1,0 +1,6 @@
+data-check:
+  list:
+    - sql: select count(1) from user where user_id = null
+      desc: 用户id存在空值
+    - sql: select count(1) from dw where dw_id = null
+      desc: 单位id存在空值
