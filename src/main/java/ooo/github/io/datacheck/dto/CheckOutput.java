@@ -15,9 +15,11 @@ import java.util.List;
 @NoArgsConstructor
 public class CheckOutput {
 
-    public static final CheckOutput EMPTY = new CheckOutput("", Collections.emptyList());
+    public static final CheckOutput EMPTY = new CheckOutput("", 0L, Collections.emptyList());
 
     private String msg;
+
+    private Long total;
 
     private List<ArchiveCheckResult> data;
 

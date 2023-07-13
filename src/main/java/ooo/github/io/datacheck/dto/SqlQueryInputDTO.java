@@ -6,7 +6,7 @@ import lombok.Data;
  * @author kaiqin
  */
 @Data
-public class CheckInputDTO {
+public class SqlQueryInputDTO {
 
     private Long pageNo;
 

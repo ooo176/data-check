@@ -2,6 +2,7 @@ package ooo.github.io.datacheck.controller;
 
 import ooo.github.io.datacheck.dto.CheckInputDTO;
 import ooo.github.io.datacheck.dto.CheckOutput;
+import ooo.github.io.datacheck.dto.SqlQueryInputDTO;
 import ooo.github.io.datacheck.service.CustomServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sql")
-public class RyController {
+public class SqlController {
 
     @Autowired
     private CustomServiceImpl customService;
@@ -22,5 +23,10 @@ public class RyController {
     @PostMapping("/check")
     public CheckOutput check(@RequestBody CheckInputDTO inputDTO) {
         return customService.list(inputDTO);
+    }
+
+    @PostMapping("/query")
+    public CheckOutput check(@RequestBody SqlQueryInputDTO inputDTO) {
+        return customService.query(inputDTO);
     }
 }
