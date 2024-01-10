@@ -131,17 +131,4 @@
         </profile>
     </profiles>
 
-    <activeProfiles>
-        <activeProfile>github</activeProfile>
-    </activeProfiles>
-
-
-    <servers>
-        <server>
-            <id>github</id>
-            <username>ooo176</username>
-            <password>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</password>
-        </server>
-    </servers>
-
 </project>
