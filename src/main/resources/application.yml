@@ -1,0 +1,19 @@
+vhr:
+  host: 127.0.0.1
+  mysql:
+    password: 111
+  redis:
+    password: 111
+
+
+server:
+  port: 8081
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  datasource:
+    url: jdbc:mysql://${vhr.host}}:3306/demo
+    username: root
+    password: ${vhr.mysql.password}
